@@ -1,0 +1,276 @@
+
+:root{
+--left-color:  #242e4d;
+--right-color: #897e79;
+--green-dark:  #35c3c1;
+--green-light: #00d6b7;
+--gray:        #8f8f8f;
+--gray-light:  #f5f6f8;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+   }
+
+
+
+
+
+/*Variables*/
+:root{
+    --main-color: #007710;
+    --second-color: #edeae3;
+    --text-color: #00d300;
+    --bg-color: #fff;
+
+    /* Box Shadow */
+    --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
+}
+
+
+
+section{
+    padding: 50px 100px;
+}
+
+
+
+img{
+    width: 100%;
+}
+
+
+body{
+    color: var(--text-color);
+}
+
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 100px;
+    transition: 0.5s linear;
+    background-color: var(--text-color);
+}
+
+
+.logo img{
+    width: 60px;
+}
+
+
+
+.navbar{
+    display: flex;
+}
+
+
+
+.navbar a{
+    padding: 8px 17px;
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+
+.navbar a:hover{
+    background: var(--main-color);
+    border-radius: 0.2rem;
+    transition: 0.2s all linear;
+}
+
+
+
+.header.icon{
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    column-gap: 0.8rem;
+}
+
+
+.header-icon .bx{
+    color: var(--bg-color);
+}
+
+
+.header-icon .bx:hover{
+    color: var(--main-color);
+}
+
+
+
+#menu-icon{
+    color: var(--bg-color);
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.search-box{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%);
+    background: var(--bg-color);
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+.search-box.active{
+    top: 110%;
+    box-shadow: var(--box-shadow);
+    transition: 0.2s all linear;
+}
+
+
+.search-box input {
+    padding: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+
+.search-box input::placeholder{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+html, body { height: 100%; }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  
+}
+
+.login-form {
+  width: 100%;
+  padding: 2em;
+  position: relative;
+  background: rgba(black, .15);
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -2px; left: 0;
+    height: 2px; width: 100%;
+    
+    background: linear-gradient(
+      to right,
+      --green-dark,
+      --text-color
+    );    
+  }
+  
+  @media screen and (min-width: 600px) {
+    width: 50vw;
+    max-width: 15em;
+  }
+}
+
+  .flex-row {
+    display: flex;
+    margin-bottom: 1em;
+  }
+  
+  .lf--label {
+    width: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: var(--gray-light);
+    cursor: pointer;
+  }
+  .lf--input {
+    flex: 1;
+    padding: 1em;
+    border: 0;
+    color: var(--gray);
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      transition: transform .15s ease;
+      transform: scale(1.1);
+    }
+  }
+
+  .lf--submit {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    
+    background: linear-gradient(
+      to right,
+      var(--green-dark),
+      var(--green-light)
+    );
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: .75em;
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(black, .2);
+    
+    &:focus {
+      outline: none;
+      transition: transform .15s ease;
+      transform: scale(1.1);
+    }
+  }
+
+.lf--forgot {
+  margin-top: 1em;
+  color: var(--green-light);
+  font-size: .65em;
+  text-align: center;
+  position: relative;
+}
+
+::placeholder { color: gray; }
